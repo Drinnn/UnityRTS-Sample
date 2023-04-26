@@ -34,7 +34,7 @@ public class UnitMovement : NetworkBehaviour
     [ClientCallback]
     private void Update()
     {
-        if (!hasAuthority || !Mouse.current.rightButton.wasPressedThisFrame)
+        if (!isOwned || !Mouse.current.rightButton.wasPressedThisFrame)
         {
             return;
         }
