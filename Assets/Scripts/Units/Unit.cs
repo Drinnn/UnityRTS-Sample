@@ -4,6 +4,9 @@ using UnityEngine.Events;
 
 public class Unit : NetworkBehaviour
 {
+    public UnitMovement UnitMovement => unitMovement;
+    
+    [SerializeField] private UnitMovement unitMovement;
     [SerializeField] private UnityEvent onSelected;
     [SerializeField] private UnityEvent onDeselected;
 
