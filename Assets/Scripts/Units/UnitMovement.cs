@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class UnitMovement : NetworkBehaviour
 {
-    [SerializeField] private NavMeshAgent agent = null;
+    [SerializeField] private NavMeshAgent agent;
 
     private Camera _mainCamera;
     

@@ -4,8 +4,8 @@ using UnityEngine.EventSystems;
 
 public class UnitSpawner : NetworkBehaviour, IPointerClickHandler
 {
-    [SerializeField] private GameObject bigTankUnity = null;
-    [SerializeField] private Transform unitSpawnPoint = null;
+    [SerializeField] private GameObject bigTankUnity;
+    [SerializeField] private Transform unitSpawnPoint;
     
     #region Server
 
