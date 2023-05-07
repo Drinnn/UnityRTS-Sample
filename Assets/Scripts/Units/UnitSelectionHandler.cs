@@ -81,11 +81,7 @@ public class UnitSelectionHandler : MonoBehaviour
             }
         
             _selectedUnits.Add(unit);
-
-            foreach (Unit selectedUnit in _selectedUnits)
-            {
-                selectedUnit.Select();
-            }
+            unit.Select();
 
             return;
         }

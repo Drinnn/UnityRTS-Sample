@@ -1,8 +1,8 @@
 using Mirror;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
-public class UnitSpawner : NetworkBehaviour, IPointerClickHandler
+public class UnitSpawner : NetworkBehaviour
 {
     [SerializeField] private GameObject bigTankUnity;
     [SerializeField] private Transform unitSpawnPoint;
@@ -21,9 +21,9 @@ public class UnitSpawner : NetworkBehaviour, IPointerClickHandler
     
     #region Client
     
-    public void OnPointerClick(PointerEventData eventData)
+    public void OnMouseDown()
     {
-        if (eventData.button != PointerEventData.InputButton.Left)
+        if (!Mouse.current.leftButton.wasPressedThisFrame)
         {
             return;
         }
